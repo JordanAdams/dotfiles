@@ -8,17 +8,20 @@ Plug 'mileszs/ack.vim'
 
 " Interface
 Plug 'itchyny/lightline.vim'
-Plug 'Yggdroot/indentLine'
 
 " General
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
 Plug 'wikitopian/hardmode'
+Plug 'kopischke/vim-fetch'
 
 " Motion
 Plug 'tpope/vim-surround'
-Plug 'machakann/vim-swap' 
 Plug 'easymotion/vim-easymotion'
+
+" Editing
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'machakann/vim-swap' 
 
 " Version Control
 Plug 'tpope/vim-fugitive'
@@ -38,4 +41,3 @@ source $HOME/.config/nvim/config/plugins/ack.vim
 source $HOME/.config/nvim/config/plugins/nerdtree.vim
 source $HOME/.config/nvim/config/plugins/ale.vim
 source $HOME/.config/nvim/config/plugins/lightline.vim
-source $HOME/.config/nvim/config/plugins/indent-line.vim

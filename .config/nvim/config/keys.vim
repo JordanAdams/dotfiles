@@ -17,7 +17,7 @@ nnoremap <esc> :nohl<CR><esc>
 nnoremap <C-/> gcc
 
 " Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+map <Up> <NOP>
+map <Down> <NOP>
+map <Left> <NOP>
+map <Right> <NOP>

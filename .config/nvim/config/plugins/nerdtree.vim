@@ -6,7 +6,7 @@ autocmd vimenter * NERDTree
 
 " Checks if NERDTree is open
 function! nerdtree#isOpen()
-    return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+  return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
 endfunction
 
 " Checks if the current buffer is NERDTree
