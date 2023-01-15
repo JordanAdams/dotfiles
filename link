@@ -1,10 +1,33 @@
-#!/bin/bash
+#!/usr/bin/env python
 
-echo "Linking $PWD/nvim to $HOME/.config/nvim"
-ln -snf $PWD/nvim $HOME/.config/nvim
+import os
 
-echo "Linking $PWD/alacritty to $HOME/.config/alacritty"
-ln -snf $PWD/alacritty $HOME/.config/alacritty
 
-echo "Linking $PWD/Brewfile to $HOME/.config/Brewfile"
-ln -snf $PWD/Brewfile $HOME/Brewfile
+def src_path(p: str):
+    return os.path.join(os.getcwd(), p)
+
+
+def home_path(p: str):
+    return os.path.join(os.path.expanduser("~"), p)
+
+
+def clean_path(p: str):
+    return p.replace(home_path(""), "~/")
+
+
+def link(src: str, dest: str):
+    print(f"Linking {clean_path(src)} to {clean_path(dest)}")
+    os.system(f"ln -snf {src} {dest}")
+
+
+paths = [
+    (src_path("nvim"),      home_path(".config/nvim")),
+    (src_path("alacritty"), home_path(".config/alacritty")),
+    (src_path("Brewfile"),  home_path("Brewfile")),
+    (src_path(".zsh"),      home_path(".zsh")),
+    (src_path(".zshrc"),    home_path(".zshrc")),
+    (src_path(".zshenv"),   home_path(".zshenv")),
+]
+
+for (src, dest) in paths:
+    link(src, dest)
