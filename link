@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Linking $PWD/nvim to $HOME/.config/nvim"
+ln -snf $PWD/nvim $HOME/.config/nvim
