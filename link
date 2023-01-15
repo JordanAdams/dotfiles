@@ -5,3 +5,6 @@ ln -snf $PWD/nvim $HOME/.config/nvim
 
 echo "Linking $PWD/alacritty to $HOME/.config/alacritty"
 ln -snf $PWD/alacritty $HOME/.config/alacritty
+
+echo "Linking $PWD/Brewfile to $HOME/.config/Brewfile"
+ln -snf $PWD/Brewfile $HOME/Brewfile
