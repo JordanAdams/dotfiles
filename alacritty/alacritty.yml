@@ -40,14 +40,6 @@ font:
     x: 0
     y: 7
 
-  # OS X only: use thin stroke font rendering. Thin strokes are suitable
-  # for retina displays, but for non-retina you probably want this set to
-  # false.
-  use_thin_strokes: true
-
-# Background opacity
-background_opacity: 1.0
-
 # Mouse bindings
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }

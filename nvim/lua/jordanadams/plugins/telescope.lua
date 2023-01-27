@@ -5,7 +5,6 @@ telescope.load_extension('luasnip')
 
 local theme = require('telescope.themes').get_dropdown({
   border = true,
-  layout_strategy = "horizontal",
   preview_title = false,
   prompt_prefix = '   ',
   layout_config = {

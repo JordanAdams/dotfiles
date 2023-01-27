@@ -32,10 +32,10 @@ bindkey -v
 [[ -f $HOME/.fzf.zsh ]] && source ~/.fzf.zsh
 
 # gcloud
-[[ -f $HOME/.config/google-cloud-sdk/completion.zsh.inc ]] && source $HOME/.config/google-cloud-sdk/completion.zsh.inc
-[[ -f $HOME/.config/google-cloud-sdk/path.zsh.inc ]] && source $HOME/.config/google-cloud-sdk/path.zsh.inc
+[[ -f $HOME/.google-cloud-sdk/completion.zsh.inc ]] && source $HOME/.google-cloud-sdk/completion.zsh.inc
+[[ -f $HOME/.google-cloud-sdk/path.zsh.inc ]] && source $HOME/.google-cloud-sdk/path.zsh.inc
 
-# dev tools
+# Util Scripts
 [[ -d $HOME/code/bin ]] && export PATH=$HOME/code/bin:$PATH
 
 # gnu tools
@@ -44,5 +44,9 @@ bindkey -v
 # nvim
 [[ -d "/usr/local/bin/nvim/bin" ]] && export PATH="/usr/local/bin/nvim/bin:$PATH"
 
+# Local .zshrc
+[[ -d $HOME/.zshrc.local ]] && export PATH=$HOME/.zshrc.local
+
 # Source all the configs
 for f in $HOME/.zsh/*.zsh; source $f
+

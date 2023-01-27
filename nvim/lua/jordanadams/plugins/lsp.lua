@@ -1,3 +1,10 @@
+capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
+}
+
 ---------------
 -- LSP SETUP
 ---------------
@@ -7,7 +14,7 @@ require('lsp-setup').setup({
   on_attach = function(client, bufnr)
     require('lsp-setup.utils').format_on_save(client)
   end,
-  capabilities = vim.lsp.protocol.make_client_capabilities(),
+  capabilities = capabilities,
   servers = {
     pylsp = {},
     tsserver = {},
@@ -24,12 +31,13 @@ require('lsp-setup').setup({
   }
 })
 
+
 ---------------
 -- LSP SAGA
 ---------------
 local saga = require('lspsaga')
 
-saga.init_lsp_saga()
+saga.setup({})
 
 -- LSP Finder
 vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
@@ -41,7 +49,8 @@ vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { sil
 vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
 
 -- Peek Definition
-vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", { silent = true })
+vim.keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 
 -- Hover Doc
 vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
