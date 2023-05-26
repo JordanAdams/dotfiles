@@ -1,16 +1,16 @@
 local telescope = require("telescope")
-local builtin = require('telescope.builtin')
+local builtin = require("telescope.builtin")
 
-telescope.load_extension('luasnip')
+telescope.load_extension("luasnip")
 
-local theme = require('telescope.themes').get_dropdown({
+local theme = require("telescope.themes").get_dropdown({
   border = true,
   preview_title = false,
-  prompt_prefix = '   ',
+  prompt_prefix = "   ",
   layout_config = {
     prompt_position = "top",
-    preview_cutoff = 30
-  }
+    preview_cutoff = 30,
+  },
 })
 
 telescope.setup({
@@ -18,23 +18,23 @@ telescope.setup({
     find_files = theme,
     live_grep = theme,
     buffers = theme,
-    file_browser = theme
+    file_browser = theme,
   },
 })
 
 local TelescopePrompt = {
   TelescopePromptTitle = {
-    link = '@function.builtin'
+    link = "@function.builtin",
   },
   TelescopePromptPrefix = {
-    link = '@function'
-  }
+    link = "@function",
+  },
 }
 
 for hl, col in pairs(TelescopePrompt) do
   vim.api.nvim_set_hl(0, hl, col)
 end
 
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>ff', builtin.live_grep, {})
-vim.keymap.set('n', '<leader><Space>', builtin.buffers, {})
+vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+vim.keymap.set("n", "<leader>ff", builtin.live_grep, {})
+vim.keymap.set("n", "<leader><Space>", builtin.buffers, {})

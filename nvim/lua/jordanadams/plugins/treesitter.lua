@@ -1,15 +1,18 @@
-require('nvim-treesitter.configs').setup {
+require("nvim-treesitter.configs").setup({
   highlight = {
-    enable = true
+    enable = true,
   },
   indent = {
-    enable = true
+    enable = true,
   },
   autotag = {
-    enable = true
+    enable = true,
   },
-  ensure_installed = { "javascript", "lua", "tsx", "typescript", "css", "html", "json" }
-}
+  ensure_installed = { "javascript", "lua", "tsx", "typescript", "css", "html", "json" },
+  playground = {
+    enable = true,
+  },
+})
 
 -- Improved code folding
 vim.opt.foldmethod = "expr"

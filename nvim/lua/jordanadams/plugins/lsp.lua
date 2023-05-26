@@ -8,11 +8,11 @@ capabilities.textDocument.foldingRange = {
 ---------------
 -- LSP SETUP
 ---------------
-require('lsp-setup').setup({
+require("lsp-setup").setup({
   default_mappings = false,
   mappings = {},
   on_attach = function(client, bufnr)
-    require('lsp-setup.utils').format_on_save(client)
+    require("lsp-setup.utils").format_on_save(client)
   end,
   capabilities = capabilities,
   servers = {
@@ -23,19 +23,18 @@ require('lsp-setup').setup({
       settings = {
         Lua = {
           diagnostics = {
-            globals = { 'vim' }
-          }
-        }
-      }
-    }
-  }
+            globals = { "vim" },
+          },
+        },
+      },
+    },
+  },
 })
-
 
 ---------------
 -- LSP SAGA
 ---------------
-local saga = require('lspsaga')
+local saga = require("lspsaga")
 
 saga.setup({})
 
