@@ -23,6 +23,7 @@ def link(src: str, dest: str):
 paths = [
     (src_path("nvim"),       home_path(".config/nvim")),
     (src_path("alacritty"),  home_path(".config/alacritty")),
+    (src_path("karabiner"),  home_path(".config/karabiner")),
     (src_path("Brewfile"),   home_path("Brewfile")),
     (src_path(".zsh"),       home_path(".zsh")),
     (src_path(".zshrc"),     home_path(".zshrc")),
