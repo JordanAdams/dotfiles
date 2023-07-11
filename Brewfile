@@ -49,7 +49,6 @@ brew "zsh"
 brew "safe-rm"
 
 cask "bartender"
-cask "1password"
 cask "alacritty"
 cask "alfred3"
 cask "keepingyouawake"
