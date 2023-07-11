@@ -45,7 +45,7 @@ bindkey -v
 [[ -d "/usr/local/bin/nvim/bin" ]] && export PATH="/usr/local/bin/nvim/bin:$PATH"
 
 # Local .zshrc
-[[ -d $HOME/.zshrc.local ]] && export PATH=$HOME/.zshrc.local
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 
 # Source all the configs
 for f in $HOME/.zsh/*.zsh; source $f
