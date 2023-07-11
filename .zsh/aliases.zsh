@@ -10,6 +10,9 @@ alias tail="gtail"
 alias tar="gtar"
 alias sed="gsed"
 alias tf="terraform"
+alias tfa="terraform apply"
+alias tfp="terraform plan"
+alias tfw="terraform workspace"
 
 
 # ==============================
@@ -22,7 +25,6 @@ alias r="ranger"
 alias t="tb"
 alias j="jq"
 alias md="macdown"
-alias git="hub"
 alias dc="docker-compose"
 alias l="ls"
 alias f="fzf"
