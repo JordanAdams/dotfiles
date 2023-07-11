@@ -65,6 +65,7 @@ return require("packer").startup(function(use)
     end,
   })
   use({ "tpope/vim-surround" })
+  use({ "tpope/vim-abolish" })
   use({ "AndrewRadev/splitjoin.vim" })
   use({
     "numToStr/Comment.nvim",
@@ -114,6 +115,7 @@ return require("packer").startup(function(use)
       require("gitlinker").setup()
     end,
   })
+  use "airblade/vim-gitgutter"
 
   -- Other Helpers
   use({

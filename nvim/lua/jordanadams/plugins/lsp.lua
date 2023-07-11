@@ -19,7 +19,7 @@ require("lsp-setup").setup({
     pylsp = {},
     tsserver = {},
     rust_analyzer = {},
-    sumneko_lua = {
+    lua_ls = {
       settings = {
         Lua = {
           diagnostics = {
@@ -28,6 +28,7 @@ require("lsp-setup").setup({
         },
       },
     },
+    terraformls = {}
   },
 })
 
